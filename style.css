@@ -1,0 +1,210 @@
+/*Style HTML*/
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*Style Everything*/
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #4d77ff;
+}
+
+/*Style Images*/
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  user-drag: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*Style Nav Bar*/
+/*Style All Elements With the Class navBar*/
+.navBar {
+  position: fixed;
+  overflow: hidden;
+  background-color: #f2fa5a;
+  top: 0;
+  width: 100%;
+}
+
+/*Style Nav Bar Links*/
+.navBar a {
+  float: left;
+  display: block;
+  color: #4d77ff;
+  background-color: #f2fa5a;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Open Sauce', sans-serif;
+}
+
+/*Style Nav Bar Links on Hover*/
+.navBar a:hover {
+  background-color: #4d77ff;
+  color: #f2fa5a;
+}
+
+/*Style Active Nav Bar Links*/
+.navBar a.active {
+  background-color: #5EE6EB;
+  color: #4d77ff;
+}
+
+/*Style Nav Bar Icon*/
+.navBar .icon {
+  display: none; 
+  background-color: #4d77ff;
+  color: #f2fa5a;
+}
+
+/*Style Nav Bar to be Responsive*/
+@media screen and (max-width: 1275px /*Was 600px*/) {
+  .navBar a:not(:first-child) {display: none;}
+  .navBar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1275px /*Was 600px*/) {
+  .navBar.responsive {position: sticky;}
+  .navBar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*Remove Margin Between Nav Bar and First Image*/
+@media screen and (max-width: 1275px /*Was 600px*/) {
+  .navBar {
+    margin-bottom: -45px;
+  }
+  #home {
+    background-color: #f2fa5a;
+    color: #4d77ff;
+  }
+  #home:hover {
+    background-color: #4d77ff;
+    color: #f2fa5a;
+  }
+}
+
+/*Style hoverUnderlineAnimation*/
+.hoverUnderlineAnimation {
+  display: inline-block;
+  position: relative;
+}
+
+.hoverUnderlineAnimation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #5EE6EB;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderlineAnimation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
+
+/*Style All Elements With the Class topImage*/
+.topImage {
+  margin-top: 45px;
+}
+
+/*Add Fonts*/
+/*Add Open Sauce Semi Bold Font*/
+@font-face {
+  font-family: 'Open Sauce';
+  src: url('Open Sauce SemiBold.ttf');
+}
+
+/*Add Gagalin Font*/
+@font-face {
+  font-family: 'Gagalin';
+  src: url('Gagalin-Regular.otf');
+}
+
+/*Style Twin Test Video*/
+#twinTestVideo {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 75%;
+  height: auto;
+  border: solid #f2fa5a 8px;
+}
+
+/*Style All Elements With the Class whiteBackground*/
+.whiteBackground {
+  background-color: #ffffff;
+}
+
+/*Style All Elements With the Id sourceLink*/
+.sourceLink {
+  font-family: 'Open Sauce', sans-serif;
+  color: #f2fa5a;
+  font-size: 20px;
+  background-color: #56bbf1;
+}
+
+/*Style Links*/
+a {
+  color: #f2fa5a;
+  background-color: #56bbf1;
+}
+
+/*Style All Elements With the Id sources*/
+#sources {
+  background-color: #56bbf1;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*Style All Elements With the Id sourcesBackground*/
+#sourcesBackground {
+  background-color: #56bbf1;
+}
+
+/*Style All Elements With the Id reflectionLink*/
+#reflectionLink {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+
+/*Make References Text Smaller*/
+@media screen and (max-width: 600px) {
+  .sourceLink {
+    font-size: 17px;
+  }
+  #reflectionLink {
+    font-size: 25px;
+  }
+} 
